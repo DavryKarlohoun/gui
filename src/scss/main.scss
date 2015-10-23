@@ -102,28 +102,11 @@ $fa-font-path: '../../bower_components/font-awesome/fonts';
 // endbower
 
 @import "grid";
-
-@import "trending-item-box";
-@import "trending-four-column-grid";
-@import "trending-listing-hover";  //Ricecoder
-
-@import "grid-listing-body";
-@import "listing-rating-panel";
-@import "listing-header-other-items";
-@import "listing-header";
-@import "listing--store-front";
-@import "listing-share-media";
-@import "listing-options";
-@import "listing--image-slider";
-@import "listing-item-tabs";
-@import "listing-rating-panel";
-@import "listing-shipping-policy-panel";
-@import "listing--item-details";
+@import "signup";
 
 
 // FIXME: Prefix these correctly @ericquayson
-@import "fav-button";
-@import "item-overview";
+
 
 
 main.container {
