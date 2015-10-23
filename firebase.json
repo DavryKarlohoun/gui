@@ -1,5 +1,5 @@
 {
-  "firebase": "DavryKarlohoun--gui",
+  "firebase": "davrykarlohoun--gui",
   "public": "dist",
   "ignore": [
     "firebase.json",
