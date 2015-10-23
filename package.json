@@ -1,0 +1,34 @@
+{
+  "name": "gui",
+  "version": "0.0.0",
+  "description": "gui cats_overflow",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --directory --files='src/*.html, src/main.css'",
+    "sass": "node-sass src/scss/main.scss src/css/main.css",
+    "install:bower": "bower install --save",
+    "postinstall:bower": "wiredep --src 'src/*.html'",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavryKarlohoun/gui.git"
+  },
+  "author": [
+    "Terry Calhoun <drumslayert@gmail.com>",
+    "Karlo Eleuterio <karloe@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavryKarlohoun/gui/issues"
+  },
+  "homepage": "https://github.com/DavryKarlohoun/gui#readme",
+  "devDependencies": {
+    "bower": "^1.5.3",
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "node-sass": "^3.3.3",
+    "wiredep": "^2.2.2"
+  }
+}
