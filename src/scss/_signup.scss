@@ -48,10 +48,11 @@ body{
   // border-bottom: 1px solid gray;
   // display: block;
 
-.container {
+main.container {
   max-width: 94%;
   margin-left: 3%;
   margin-right: 3%;
+  @extend .clearfix;
 }
 #left-column {
   display: inline-block;

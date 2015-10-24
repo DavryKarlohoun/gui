@@ -1,43 +1,21 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <!-- bower:css -->
-        <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
-        <!-- endbower -->
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <!--Need containers for the heading-->
-        <main class="container">
           <!-- DON'T PUT ANYTHING ELSE IN HERE! -->
-          <section class="home-questions">
+          <section class="home-questions" ng-app="catsoverflow" ng-repeat="question in questions">
             <h1>Top Questions</h1>
             <hr>
             <ul class="question-widget">
               <li class="votes-num">
-                <span class="votes-count">5</span>
+                <span class="votes-count">{{question.question_meows}}</span>
                 <span class="label">votes</span>
               </li>
               <li class="answers-num">
-                <span class="answers-count">6</span>
+                <span class="answers-count">{{question.answers_count}}</span>
                 <span class="label">answers</span>
               </li>
               <li class="question-overview">
-                <a class="question-title" href="#">How to even make a website?</a>
-                <span class="question-time">&nbsp; asked 10 minutes ago</span>
-                <a class="question-user" href="#">carlostheman7</a>
+                <a class="question-title" href="#">{{question.title}}</a>
+                <span class="question-time">&nbsp; {{question.created_at | date}}</span>
+                <a class="question-user" href="#">{{question.user.display_name}}</a>
               </li>
             </ul>
           </section>  <!-- .home-questions -->
@@ -48,23 +26,4 @@
               </span>
             </div>
           </section>
-        </main><!-- .container -->
-
-        <!-- bower:js -->
-        <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/angular/angular.js"></script>
-        <!-- endbower -->
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
-</html>
+        
