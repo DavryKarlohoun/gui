@@ -20,27 +20,36 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!--Need containers for the heading-->
-        <header class="main-header">
-          <h1>CatsOverFlow</h1>
-          <img src="https://avatars2.githubusercontent.com/u/15252060?v=3&s=200">
-          <nav></nav>
-        </header>
-        <main class="container">
-          <div calss="signup-form">
-            <form>
-             <p>
-             <label for="display_name">username: </label>
-                       <input type="text" id="display_name"><br>
-             <label for="email">email: </label>
-                       <input type="text" id="email"><br>
-             <label for="full_name">Your name: </label>
-                       <input type="text" id="full_name"><br>
-             <label for="pasword">password: </label>
-                       <input type="text" id="password"><br>
-             <input type="submit" value="Send">
-             </p>
-          </form>
-          </div>
+        <main class="home-container">
+          <!-- DON'T PUT ANYTHING ELSE IN HERE! -->
+          <div class="sub-container">
+          <section class="home-questions">
+            <h1>Top Questions</h1>
+            <hr>
+            <ul class="question-widget">
+              <li class="votes-num">
+                <span class="votes-count">5</span>
+                <span class="label">votes</span>
+              </li>
+              <li class="answers-num">
+                <span class="answers-count">6</span>
+                <span class="label">answers</span>
+              </li>
+              <li class="question-overview">
+                <a class="question-title" href="#">How to even make a website?</a>
+                <span class="question-time">&nbsp; asked 10 minutes ago</span>
+                <a class="question-user" href="#">carlostheman7</a>
+              </li>
+            </ul>
+          </section>  <!-- .home-questions -->
+          <section class="home-tips">
+            <div class="tips">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </span>
+            </div>
+          </section>
+        </div>
         </main><!-- .container -->
 
         <!-- bower:js -->
