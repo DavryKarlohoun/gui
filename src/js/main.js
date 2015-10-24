@@ -6,7 +6,7 @@
 
 
   angular.module ('catsoverflow',['ngRoute'],
-  function($routeProvider){
+    function($routeProvider){
         $routeProvider
         .when('/', {
           templateUrl: 'index.html'
@@ -20,21 +20,14 @@
         .when('/ask-question', {
           templateUrl: 'qa.html'
         });
-    });
+    })
 
-
-
-})();
-
-
-
-
-
-
-    angular.module ('catsoverflow',['ngRoute'])
     .run([ '$rootScope','$http', function($scope, $http){
       $http.get("https://cats-overflow.herokuapp.com/questions.json") // will work running html in Browser Sync
         .then(function(response){
           $scope.questions = response.data;
         })
       }]);
+
+
+})();
