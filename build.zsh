@@ -33,6 +33,7 @@ cp bower_components/angular/angular.js dist/bower_components/angular/angular.js
 mkdir -p dist/bower_components/angular-route/
 cp bower_components/angular-route/angular-route.js dist/bower_components/angular-route/angular-route.js
 
-
+echo 'Step 5: Copy img folder'
+cp  -r src/img/ dist/img
 
 npm run start:dist
