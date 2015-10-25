@@ -20,10 +20,6 @@
         });
     })
 
-    // .run([ '$rootScope','$http', function($scope, $http){
-
-    // }])
-
     .controller("MainCtrl", function($scope, $http){
       $http.get("https://cats-overflow.herokuapp.com/questions.json")
       .then(function(response){
@@ -45,4 +41,5 @@
       };
 
     });
+
 })();
