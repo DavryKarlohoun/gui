@@ -1,10 +1,12 @@
 body {
   font-family: sans-serif;
 main.container {
+    div{
     section.home-questions {
-      width: 70%;
+      width: 68%;
       margin: 0.5em;
       display: inline-block;
+      float: left;
       vertical-align: top;
       padding-left: 2%;
       padding-right: 2%;
@@ -89,6 +91,7 @@ main.container {
     } //home-questions
     section.home-tips {
       display: inline-block;
+      float: right;
       width: 26%;
       height: auto;
       background-color: #EEEEEE;
@@ -100,6 +103,6 @@ main.container {
       padding-top: 20px;
       margin-top: 15px;
     } //home-tips
-}
-
+    }
+  }
 }

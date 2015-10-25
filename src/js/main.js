@@ -1,10 +1,10 @@
 ;(function(){ //iife for angularjs
   angular.module('catsoverflow',['ngRoute'],
-    function($routeProvider){
+    function ($routeProvider){
         $routeProvider
         .when('/', {
           templateUrl: 'partials/home.html',
-          controller: 'MainCtrl'
+          controller: 'HomeCtrl'
         })
         .when('/login', {
           templateUrl: 'partials/signup.html',
@@ -12,21 +12,63 @@
         })
         .when('/home', {
           templateUrl: 'partials/home.html',
-
+          publicAccess: true
         })
         .when('/ask-question', {
-          templateUrl: 'partials/qa.html',
-
+          templateUrl: 'partials/ask.html',
         });
     })
 
-    .controller("MainCtrl", function($scope, $http){
+
+
+
+    .controller("HomeCtrl", function($scope, $http){          //home-top questions
       $http.get("https://cats-overflow.herokuapp.com/questions.json")
       .then(function(response){
         $scope.questions = response.data;
       });
     })
-    .controller("signup-controller", function($scope, $http){
+
+
+
+    .controller("ask-controller", function($scope, $http){   //ask new question
+      $scope.askNew = {
+        title: "",
+        description: ""
+      }
+      $scope.askNewQuestion = function(){
+        $http.post("http://cats-overflow.herokuapp.com/questions.json", $scope.askNew)
+        .then(function(data){
+          console.log(data);
+        });
+      };
+    })
+
+
+
+    .controller("login-controller", function($scope, $http, $location){  //log-in controller
+      $scope.logIn = {
+        email: "",
+        password: ""
+      }
+      $scope.processLogin = function(){
+        $http.post("http://cats-overflow.herokuapp.com/login.json", $scope.logIn)
+        .then(
+          function(data){ //success
+          console.log(data);
+          $scope.usersession = data;
+
+          },
+          function(error){
+          console.log(error);
+          console.log("error!");
+        });
+      };
+    })
+
+
+
+    .controller("signup-controller", function($scope, $http){  //sign up controller
       $scope.signupData = {
         display_name: "",
         email: "",
@@ -39,7 +81,11 @@
           console.log(data);
         });
       };
-
     });
+
+
+
+
+
 
 })();

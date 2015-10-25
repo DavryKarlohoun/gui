@@ -1,22 +1,24 @@
 
 
             <!--  <img src="/src/img/cat1.jpg" alt="cat" /> -->
-             <form id="login">
+            <div class="login-section" ng-controller="login-controller">
+             <form id="login" ng-submit="processLogin()">
               <h3>login</h3>
               <ul>
                 <li>
                   <label for="display_name"></label>
-                    <input type="text" placeholder="username" id="display_name">
+                    <input type="text" placeholder="username" id="display_name" ng-model="logIn.email">
                 </li>
                 <li>
                   <label for="display_name"></label>
-                    <input type="text" placeholder="password" id="password">
+                    <input type="text" placeholder="password" id="password" ng-model="logIn.password">
                 </li>
                 <li>
                   <input type="submit" value="submit">
                 </li>
               </ul>
             </form>
+          </div>
           <div id="left-column" ng-controller="signup-controller">
             <form class="signup" ng-submit="processSignUp()">
               <h3>Sign up</h3>
