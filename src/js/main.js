@@ -27,9 +27,24 @@
         .then(function(response){
           $scope.questions = response.data;
         })
-      }]);
+      }])
 
-      
+      .controller("signup-controller", function($scope, $http){
+
+        $scope.signupData= {
+          display_name: "",
+          email: "",
+          full_name: "",
+          password: ""
+        }
+        $scope.processSignUp= function(){
+          $http.post("http://cats-overflow.herokuapp.com/users.json", $scope.signupData)
+          .then(function (response){
+            console.log(response);
+          });
+        }
+      });
+
 
 
 
