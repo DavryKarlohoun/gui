@@ -12,13 +12,14 @@
           templateUrl: 'index.html'
         })
         .when('/login', {
-          templateUrl: 'signup.html'
+          templateUrl: 'partials/signup.html',
+          controller: 'signup-controller'
         })
         .when('/home', {
-          templateUrl: 'home.html'
+          templateUrl: 'partials/home.html'
         })
         .when('/ask-question', {
-          templateUrl: 'qa.html'
+          templateUrl: 'partials/qa.html'
         });
     })
 
@@ -29,21 +30,21 @@
         })
       }])
 
-      .controller("signup-controller", function($scope, $http){
+    .controller("signup-controller", function($scope, $http){
 
-        $scope.signupData= {
-          display_name: "",
-          email: "",
-          full_name: "",
-          password: ""
-        }
-        $scope.processSignUp= function(){
-          $http.post("http://cats-overflow.herokuapp.com/users.json", $scope.signupData)
-          .then(function (response){
-            console.log(response);
-          });
-        }
-      });
+      $scope.signupData= {
+        display_name: "",
+        email: "",
+        full_name: "",
+        password: ""
+      }
+      $scope.processSignUp= function(){
+        $http.post("http://cats-overflow.herokuapp.com/users.json", $scope.signupData)
+        .then(function (response){
+          console.log(response);
+        });
+      }
+    });
 
 
 
