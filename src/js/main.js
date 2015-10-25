@@ -1,7 +1,3 @@
-
-
-
-
 ;(function(){ //iife for angularjs
 
 
@@ -28,6 +24,7 @@
         .then(function(response){
           $scope.questions = response.data;
         })
+
       }])
 
     .controller("signup-controller", function($scope, $http){
@@ -46,8 +43,5 @@
       }
     });
 
-
-
-
-
+  }]);
 })();
