@@ -101,8 +101,14 @@ $fa-font-path: '../../bower_components/font-awesome/fonts';
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
 @import "grid";
 @import "signup";
+@import "home";
+@import "qa";
 
 
 // FIXME: Prefix these correctly @ericquayson
