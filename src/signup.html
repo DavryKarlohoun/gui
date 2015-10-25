@@ -17,25 +17,25 @@
                 </li>
               </ul>
             </form>
-          <div id="left-column">
-            <form class="signup">
+          <div id="left-column" ng-controller="signup-controller">
+            <form class="signup" ng-submit="processSignUp()">
               <h3>Sign up</h3>
              <ul>
                <li>
                  <label for="display_name"></label>
-                  <input type="text" placeholder="username" id="display_name"><br>
+                  <input type="text" placeholder="username" id="display_name" ng-model="signupData.display_name"><br>
                </li>
                <li>
                  <label for="email"></label>
-                   <input type="text" placeholder="email" id="email"><br>
+                   <input type="text" placeholder="email" id="email" ng-model="signupData.email"><br>
                </li>
                <li>
                  <label for="full_name"></label>
-                  <input type="text" placeholder="full name" id="full_name"><br>
+                  <input type="text" placeholder="full name" id="full_name" ng-model="signupData.full_name"><br>
                </li>
                <li>
                  <label for="pasword"></label>
-                  <input type="text" placeholder="password" id="password"><br>
+                  <input type="text" placeholder="password" id="password" ng-model="signupData.password"><br>
                </li>
                <li>
                  <input type="submit" value="Send">
