@@ -25,6 +25,9 @@
           $scope.questions = response.data;
         })
 
+      }]);
+
+
       }])
 
     .controller("signup-controller", function($scope, $http){
