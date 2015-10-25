@@ -4,10 +4,8 @@ rm -rf dist/*
 
 echo 'Step 1: Copy all the HTML'
 cp src/index.html dist/
-cp src/login.html dist/
-cp src/question.html dist/
-# mkdir dist/partials/
-# cp -r src/partials dist/
+mkdir dist/partials/
+cp -r src/partials dist/
 
 echo 'Step 2a: Build all the Sass into CSS!'
 npm run sass
@@ -35,6 +33,6 @@ cp bower_components/angular/angular.js dist/bower_components/angular/angular.js
 mkdir -p dist/bower_components/angular-route/
 cp bower_components/angular-route/angular-route.js dist/bower_components/angular-route/angular-route.js
 
-cp questions.json dist/
+
 
 npm run start:dist
