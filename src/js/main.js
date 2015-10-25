@@ -30,7 +30,6 @@
         $scope.questions = response.data;
       });
     })
-
     .controller("signup-controller", function($scope, $http){
       $scope.signupData = {
         display_name: "",
