@@ -2,7 +2,7 @@
           <!-- DON'T PUT ANYTHING ELSE IN HERE! -->
           <h1>How to make divs that will be on top of another div and other element tags?</h1>
           <hr>
-          <section class="ask-main">
+          <section class="ask-main" ng-controller="ask-controller">
             <form class="comment-form" ng-submit="askNewQuestion()">
               <input id="user-login" name="username" placeholder="I want to ask..." ng-model="askNew.title"/>
               <textarea type="text" class="comment-box" name="comment-name" placeholder="More details here..." ng-model="askNew.body"></textarea>

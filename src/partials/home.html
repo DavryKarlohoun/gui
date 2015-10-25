@@ -1,7 +1,8 @@
 
           <!-- DON'T PUT ANYTHING ELSE IN HERE! -->
           <h1>Top Questions</h1>
-          <section class="home-questions" ng-repeat="question in questions">
+          <div ng-controller="HomeCtrl">
+          <section class="home-questions"  ng-repeat="question in questions | limitTo: 6">
             <hr/>
             <ul class="question-widget">
               <li class="votes-num">
@@ -15,7 +16,7 @@
               <li class="question-overview">
                 <a class="question-title" href="#">{{question.title}}</a>
                 <span class="question-time">&nbsp; {{question.created_at | date}}</span>
-                <a class="question-user" href="#">{{question.user.display_name}}</a>
+                <a class="question-user" href="#/profile">{{question.user.display_name}}</a>
               </li>
             </ul>
           </section>  <!-- .home-questions -->
@@ -26,4 +27,4 @@
               </span>
             </div>
           </section>
-
+        </div>
