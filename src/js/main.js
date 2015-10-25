@@ -9,7 +9,7 @@
     function($routeProvider){
         $routeProvider
         .when('/', {
-          templateUrl: 'index.html'
+          templateUrl: ''
         })
         .when('/login', {
           templateUrl: 'partials/signup.html',
@@ -27,23 +27,25 @@
       $http.get("https://cats-overflow.herokuapp.com/questions.json") // will work running html in Browser Sync
         .then(function(response){
           $scope.questions = response.data;
-        })
-      }])
+        });
 
+    }])
     .controller("signup-controller", function($scope, $http){
-
-      $scope.signupData= {
+      $scope.signupData = {
         display_name: "",
         email: "",
         full_name: "",
         password: ""
       }
-      $scope.processSignUp= function(){
+
+      $scope.processSignUp = function(){
         $http.post("http://cats-overflow.herokuapp.com/users.json", $scope.signupData)
         .then(function (response){
           console.log(response);
         });
-      }
+        return;
+      };
+
     });
 
 
