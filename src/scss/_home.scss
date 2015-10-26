@@ -2,6 +2,7 @@ body {
   font-family: sans-serif;
 main.container {
     div{
+      @extend .clearfix;
     section.home-questions {
       width: 68%;
       margin: 0.5em;
@@ -14,6 +15,8 @@ main.container {
         font-weight: 300;
         margin-top: 0.25ex;
         margin-bottom: 0.25ex;
+        text-align: left;
+        float: left;
       }
       ul.question-widget {
         padding: 0px;
@@ -87,6 +90,15 @@ main.container {
             width: auto;
           }
         }
+      }
+      ul.question-widget:nth-child(odd){
+        background-color: #FFFFFF;
+        opacity: 0.60;
+
+      }
+      ul.question-widget:nth-child(even){
+        background-color: #FFFFFF;
+        opacity: 0.60;
       }
     } //home-questions
     section.home-tips {
