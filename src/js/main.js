@@ -26,6 +26,7 @@
       $http.get("https://cats-overflow.herokuapp.com/questions.json")
       .then(function(response){
         $scope.questions = response.data;
+        console.log(questions.full_name);
       });
     })
 
@@ -54,9 +55,18 @@
       $scope.processLogin = function(){
         $http.post("http://cats-overflow.herokuapp.com/login.json", $scope.logIn)
         .then(
-          function(data){ //success
-          console.log(data);
-          $scope.usersession = data;
+          function(response){ //success
+          console.log(response);
+          $scope.hello = response.data;
+          // console.log(userSession.full_name);
+          $('a[href="#/login"]').addClass("hide");
+          $('span.welcome').addClass('active');
+          $('div.login-section').addClass('inactive');
+          $('div#left-column').addClass('inactive');
+          $('p.hp').addClass('inactive');
+
+
+
 
           },
           function(error){

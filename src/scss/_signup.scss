@@ -19,6 +19,20 @@
       display: inline-block;
       margin-left: 1.3em;
     }
+    span.welcome {
+      padding-top: 70px;
+      margin-left: 10px;
+      display: none;
+    }
+    span.welcome.active {
+      padding-top: 70px;
+      margin-left: 10px;
+      display: inline-block;
+    }
+    span.welcome.active{
+      padding-top: 70px;
+      margin-left: 10px;
+    }
     nav#main-nav {
       float: right;
       margin-top: 2.5em;
@@ -35,6 +49,9 @@
       }
       a:hover {
         background: lightgray;
+      }
+      a[href="#/login"].hide {
+        visibility: hidden;
       }
     }
   }
@@ -85,6 +102,14 @@ div.login-section {
     }
   }
 }
+div.login-section.inactive {
+  display: none;
+}
+div#left-column {
+  &.inactive {
+  display: none;
+}
+}
 
 .signup {
   // width: 20%;
@@ -101,7 +126,7 @@ div.login-section {
   margin: 0.3em;
 
 }
-p {
+p.hp {
   color: #fff;
   font-weight: bold;
   font-size: 20pt;
@@ -112,5 +137,7 @@ p {
   z-index: 9;
   margin-top: 25%;
   margin-left: 5.5%;
-
+  &.inactive {
+    display: none;
+  }
 }
